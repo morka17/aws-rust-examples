@@ -17,7 +17,7 @@ async fn main() -> Result<(), Error> {
     let resp = client.list_tables().send().await?;
 
     println!("Tables:");
-
+ 
     let names = resp.table_names().unwrap_or_default();
 
     for name in names  {
